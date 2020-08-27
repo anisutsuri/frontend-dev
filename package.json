@@ -1,0 +1,56 @@
+{
+  "name": "frontend-dev",
+  "version": "1.0.0",
+  "description": "Project with basic setup of Webpack 5 for front-end development.",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --color --config ./config/webpack.dev.js",
+    "prod": "webpack --config ./config/webpack.prod.js"
+  },
+  "author": "https://github.com/anisutsuri",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/anisutsuri/frontend-dev.git"
+  },
+  "license": "MIT",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@hail2u/css-mqpacker": "^8.0.1",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.1",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^5.0.0-beta.28",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.2"
+  },
+  "dependencies": {
+    "@beyonk/google-fonts-webpack-plugin": "^1.5.0"
+  }
+}

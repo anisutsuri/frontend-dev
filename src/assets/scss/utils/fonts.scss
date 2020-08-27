@@ -1,0 +1,4 @@
+@include font-face("Montserrat", "/assets/fonts/Montserrat-Bold", swap, 700);
+@include font-face("Roboto", "/assets/fonts/Roboto-Regular");
+@include font-face("Roboto", "/assets/fonts/Roboto-Italic", $style: italic);
+@include font-face("Roboto", "/assets/fonts/Roboto-Bold", $weight: bold);
