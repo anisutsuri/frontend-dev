@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { PATHS } = require('../paths');
 
-exports.extractCSS = ({ test = /\.css$/, options = {}, loaders = [] } = {}) => {
+exports.loader = ({ test = /\.css$/, options = {}, loaders = [] } = {}) => {
   return {
     module: {
       rules: [
@@ -31,13 +31,13 @@ exports.extractCSS = ({ test = /\.css$/, options = {}, loaders = [] } = {}) => {
               }
             }
           ].concat(loaders),
-        },
+        }
       ]
     },
     plugins: [
       new MiniCssExtractPlugin({
         filename: `${PATHS.assets}css/[name].[contenthash].css`
       })
-    ],
+    ]
   };
 };

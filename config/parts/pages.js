@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { PATHS, PAGES_DIR } = require('../paths');
 
-exports.page = ({ title = 'Frontend-development', filename = 'index', chunks = [] } = {}) => {
+exports.loader = ({ title = 'Frontend-development', filename = 'index', chunks = [] } = {}) => {
   return {
     plugins: [
       new HtmlWebpackPlugin({

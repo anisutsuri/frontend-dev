@@ -4,8 +4,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { PATHS } = require('./paths');
 
 const styles = require('./parts/styles');
-const pages = require('./parts/pages');
+const vue = require('./parts/vue');
 const images = require('./parts/images');
+const pages = require('./parts/pages');
 
 module.exports = merge([
   {
@@ -49,7 +50,8 @@ module.exports = merge([
     },
     resolve: {
       alias: {
-        '~': PATHS.src
+        '~': PATHS.src,
+        vue$: 'vue/dist/vue.js'
       }
     },
     plugins: [
@@ -69,7 +71,8 @@ module.exports = merge([
   },
   images.loadImages(),
   images.loadSVG(),
-  styles.extractCSS({
+  vue.loader(),
+  styles.loader({
     test: /\.s[ac]ss$/i,
     loaders: [
       {
@@ -80,6 +83,6 @@ module.exports = merge([
       }
     ]
   }),
-  styles.extractCSS(),
-  pages.page()
+  styles.loader(),
+  pages.loader()
 ]);

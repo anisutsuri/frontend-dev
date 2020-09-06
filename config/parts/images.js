@@ -15,7 +15,7 @@ exports.loadImages = () => ({
         }
       }
     ]
-  },
+  }
 });
 
 exports.loadSVG = () => ({
@@ -32,6 +32,6 @@ exports.loadSVG = () => ({
         }
       }
     ]
-  },
+  }
 });
 

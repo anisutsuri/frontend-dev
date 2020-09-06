@@ -9,8 +9,8 @@
   },
   "author": "https://github.com/anisutsuri",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/anisutsuri/frontend-dev.git"
+    "type": "git",
+    "url": "https://github.com/anisutsuri/frontend-dev.git"
   },
   "license": "MIT",
   "browserslist": {
@@ -45,12 +45,16 @@
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
+    "vue-loader": "^15.9.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^5.0.0-beta.28",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.2"
   },
   "dependencies": {
-    "@beyonk/google-fonts-webpack-plugin": "^1.5.0"
+    "@beyonk/google-fonts-webpack-plugin": "^1.5.0",
+    "vue": "^2.6.12"
   }
 }
