@@ -7,7 +7,7 @@ import './assets/scss/main.scss';
 // Vue
 window.Vue = require('vue');
 
-Vue.component('template', require('./js/components/Template.vue').default);
+Vue.component('template', require('./components/Template.vue').default);
 
 const app = new Vue({
   el: '#app'

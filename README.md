@@ -19,6 +19,7 @@
 * `src/index.js` - main file for index.html, into which all necessary libraries and the initialization application are imported.
 * `src/pages` - folder for HTML files.
 * `src/js` - folder custom application scripts.
+* `src/components/` - folder with custom .vue components.
 * `src/assets/scss` - folder custom application SCSS styles.
 * `src/assets/css` - folder custom application CSS styles.
 * `src/assets/img` - folder for images.
