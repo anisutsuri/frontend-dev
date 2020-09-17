@@ -57,9 +57,9 @@ module.exports = merge([
     },
     resolve: {
       alias: {
-        '~': PATHS.src,
-        '@': `${PATHS.src}/js`,
-        vue$: 'vue/dist/vue.js'
+        '@': PATHS.src,
+        vue$: 'vue/dist/vue.js',
+        vuex$: 'vuex/dist/vuex.js',
       }
     },
     plugins: [

@@ -6,10 +6,14 @@ import './assets/scss/main.scss';
 
 // Vue
 import Vue from 'vue';
+import store from './vuex/store';
+import router from './router/router';
+import App from './App.vue';
 
-Vue.component('app-template', require('./components/Template.vue').default);
+Vue.config.productionTip = false;
 
-// eslint-disable-next-line no-unused-vars
-const app = new Vue({
-  el: '#app',
-});
+new Vue({
+  render: (h) => h(App),
+  store,
+  router,
+}).$mount('#app');
