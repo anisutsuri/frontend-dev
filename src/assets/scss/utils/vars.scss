@@ -1,17 +1,22 @@
 // Colors
 $palette-lt-white-primary: #FFFFFF;
 $palette-lt-white-secondary: #F7F6F5;
+$palette-lt-gray: #D6D6D5;
+$palette-lt-dark-gray: #373430;
+$palette-lt-black: #221E1A;
 
 $palette-dt-black-primary: #000000;
 $palette-dt-black-secondary: #1C1A19;
+$palette-dt-dark-gray: #1D1D22;
+$palette-dt-gray: #2C2C32;
 
 $palette-primary: #FF8522;
+$palette-primary-light: #FF6800;
 $palette-primary-dark: #FF6800;
 
 $palette-secondary: #FFB841;
 $palette-secondary-light: #FFCA86;
-
-$palette-font: #101010;
+$palette-secondary-dark: #FF6800;
 
 // Fonts
 $font-family-title: 'Montserrat', sans-serif;
@@ -25,9 +30,17 @@ $font-line-height: 1.4;
 
 // Dimensions
 $width-desktop: 1920px;
-$width-laptop: 1440px;
+$width-desktop-small: 1440px;
+$width-laptop: 1200px;
+$width-laptop-small: 992px;
 $width-table: 768px;
 $width-phone: 320px;
 
+$height-phone: 375px;
+
 // Animation
 $anim-delay: 0.2s;
+$anim-bezier-button: cubic-bezier(1, .17, .16, .83);
+
+// Elements
+$menu-height: 80;

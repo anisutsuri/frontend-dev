@@ -15,7 +15,8 @@ module.exports = merge([
     },
     output: {
       filename: `${PATHS.assets}js/[name].[contenthash].js`,
-      path: PATHS.dist
+      path: PATHS.dist,
+      publicPath: '/'
     },
     optimization: {
       splitChunks: {
@@ -32,9 +33,15 @@ module.exports = merge([
     module: {
       rules: [
         {
+          enforce: 'pre',
           test: /\.js$/,
-          use: 'babel-loader',
-          exclude: '/node_modules/'
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader',
         },
         {
           test: /\.(woff2|woff|ttf|eot)$/,
@@ -51,16 +58,13 @@ module.exports = merge([
     resolve: {
       alias: {
         '~': PATHS.src,
+        '@': `${PATHS.src}/js`,
         vue$: 'vue/dist/vue.js'
       }
     },
     plugins: [
       new CopyWebpackPlugin({
         patterns: [
-          {
-            from: `${PATHS.src}/${PATHS.assets}img`,
-            to: `${PATHS.assets}img`
-          },
           {
             from: `${PATHS.src}/static`,
             to: ''
@@ -69,8 +73,7 @@ module.exports = merge([
       })
     ]
   },
-  images.loadImages(),
-  images.loadSVG(),
+  images.loader(),
   vue.loader(),
   styles.loader({
     test: /\.s[ac]ss$/i,

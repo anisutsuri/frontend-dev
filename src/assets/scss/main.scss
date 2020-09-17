@@ -8,7 +8,7 @@
 html {
   font-size: $font-size;
   line-height: $font-line-height;
-  color: $palette-font;
+  color: $palette-dt-black-primary;
   height: 100%;
 
   @media only screen and (max-width: $width-laptop) {
@@ -33,12 +33,13 @@ body {
   background-color: $palette-lt-white-primary;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-title;
   font-weight: $font-weight-title;
 }
 
-.wrapper {} // .wrapper
+.wrapper {
+} // .wrapper
 
 // Modules:
 // @import "modules/color-picker.scss";

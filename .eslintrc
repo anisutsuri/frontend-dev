@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb/base"],
+  "rules": {
+    "no-plusplus": "off",
+    "eol-last": "off",
+    "max-len": ["error", 80, { "ignoreUrls": true }]
+  }
+}

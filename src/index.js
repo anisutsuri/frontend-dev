@@ -1,14 +1,15 @@
 // Import JS
-import './js/';
+import './js';
 
 // Import CSS - SASS
 import './assets/scss/main.scss';
 
 // Vue
-window.Vue = require('vue');
+import Vue from 'vue';
 
-Vue.component('template', require('./components/Template.vue').default);
+Vue.component('app-template', require('./components/Template.vue').default);
 
+// eslint-disable-next-line no-unused-vars
 const app = new Vue({
-  el: '#app'
-})
+  el: '#app',
+});

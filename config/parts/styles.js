@@ -26,7 +26,7 @@ exports.loader = ({ test = /\.css$/, options = {}, loaders = [] } = {}) => {
               options: {
                 sourceMap: true,
                 config: {
-                  path: './config/postcss.config.js'
+                  path: './postcss.config.js'
                 }
               }
             }

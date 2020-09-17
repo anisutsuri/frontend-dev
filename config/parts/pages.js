@@ -16,14 +16,15 @@ exports.loader = ({ title = 'Frontend-development', filename = 'index', chunks =
           'viewport': 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no',
         },
         chunks: ['vendors', 'app'].concat(chunks),
-        // minify: {
-        //   collapseWhitespace: true,
-        //   removeComments: true,
-        //   removeRedundantAttributes: true,
-        //   removeScriptTypeAttributes: true,
-        //   removeStyleLinkTypeAttributes: true,
-        //   useShortDoctype: true
-        // },
+        minify: {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: false,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          useShortDoctype: true,
+          removeAttributeQuotes: true
+        },
       })
     ]
   };

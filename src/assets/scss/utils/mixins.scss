@@ -29,20 +29,20 @@
 }
 
 // Placeholder helper
-@mixin placeholder {
-  ::-webkit-input-placeholder {
-    @content;
-  }
-  :-moz-placeholder {
-    @content;
-  }
-  ::-moz-placeholder {
-    @content;
-  }
-  :-ms-input-placeholder {
-    @content;
-  }
-}
+// @mixin placeholder {
+//   ::-webkit-input-placeholder {
+//     @content;
+//   }
+//   :-moz-placeholder {
+//     @content;
+//   }
+//   ::-moz-placeholder {
+//     @content;
+//   }
+//   :-ms-input-placeholder {
+//     @content;
+//   }
+// }
 
 // Fonts helper
 @mixin font-face(

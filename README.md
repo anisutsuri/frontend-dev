@@ -75,4 +75,4 @@ To download fonts for production, need to set the parameters in `config/webpack.
 Information about the plugin used is [here](https://www.npmjs.com/package/@beyonk/google-fonts-webpack-plugin).
 
 ## Contacts <a id="contacts"></a>
-If you have suggestions for improvement, write to the vadim27pa@gmail.com email indicating the `frontend-dev` theme.
+If you have suggestions for improvement, write to the `vadim27pa@gmail.com` email indicating the `frontend-dev` theme.

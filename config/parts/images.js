@@ -1,37 +1,40 @@
 const { PATHS } = require('../paths');
 
-exports.loadImages = () => ({
+exports.loader = () => ({
   module: {
     rules: [
       {
-        test: /\.(png|jpg|gif)$/,
-        use: {
-          loader: "url-loader",
-          options: {
-            limit: 8192,
-            name: '[name].[ext]',
-            outputPath: `${PATHS.assets}img`,
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: '[name].[ext]',
+              outputPath: `${PATHS.assets}img`,
+              esModule: false
+            }
+          },
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              },
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false,
+              }
+            }
           }
-        }
+        ]
       }
     ]
   }
 });
-
-exports.loadSVG = () => ({
-  module: {
-    rules: [
-      {
-        test: /\.svg$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: '[name].[ext]',
-            outputPath: `${PATHS.assets}img`,
-          }
-        }
-      }
-    ]
-  }
-});
-
