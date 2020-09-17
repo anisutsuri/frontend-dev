@@ -8,6 +8,11 @@
   "rules": {
     "no-plusplus": "off",
     "eol-last": "off",
-    "max-len": ["error", 80, { "ignoreUrls": true }]
+    "max-len": ["error", 80, { "ignoreUrls": true }],
+    "linebreak-style": "off",
+    "import/no-mutable-exports": "warn",
+    "prefer-const": "warn",
+    "no-unused-vars": "warn",
+    "comma-dangle": "off"
   }
 }
