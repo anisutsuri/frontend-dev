@@ -13,6 +13,7 @@
     "import/no-mutable-exports": "warn",
     "prefer-const": "warn",
     "no-unused-vars": "warn",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "quotes": "warn"
   }
 }

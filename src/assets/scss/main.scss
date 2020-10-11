@@ -1,6 +1,4 @@
 // Imports
-@import 'utils/vars';
-@import 'utils/mixins';
 @import 'utils/fonts';
 @import 'utils/reset';
 
@@ -37,9 +35,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-title;
   font-weight: $font-weight-title;
 }
-
-.wrapper {
-} // .wrapper
 
 // Modules:
 // @import 'modules/customized-form.scss';

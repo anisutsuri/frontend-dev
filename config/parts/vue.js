@@ -5,12 +5,7 @@ exports.loader = () => ({
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loader: {
-            scss: 'vue-style-loader!css-loader!sass-loader'
-          }
-        }
+        loader: 'vue-loader'
       }
     ]
   },

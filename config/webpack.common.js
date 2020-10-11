@@ -81,7 +81,11 @@ module.exports = merge([
       {
         loader: 'sass-loader',
         options: {
-          sourceMap: true
+          sourceMap: true,
+          additionalData: `
+            @import '@/${PATHS.assets}scss/utils/vars.scss';
+            @import '@/${PATHS.assets}scss/utils/mixins.scss';
+          `
         }
       }
     ]
