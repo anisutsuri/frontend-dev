@@ -2,6 +2,7 @@
 @mixin font-responsive($size-main, $size-min) {
   $size-add: $size-main - $size-min;
   $width-max: ($width-desktop - $width-phone) / 1px;
+
   font-size: calc(#{$size-min + px} + #{$size-add} * ((100vw - #{$width-phone}) / #{$width-max}));
 }
 
@@ -10,14 +11,16 @@
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
   }
+
   @if (unitless($context)) {
     $context: $context * 1px;
   }
+
   @return $pixels / $context * 1rem;
 }
 
 // Color in ARGB
-@function color-opacity($color, $opacity: 0.5) {
+@function color-opacity($color, $opacity: .5) {
   // background: $color;
   @return rgba($color, $opacity);
 }
@@ -49,20 +52,20 @@
   $family,
   $path,
   $display: fallback,
-  $weight: normal,
-  $style: normal,
-  $asset-pipeline: false
+  $weight: 400,
+  $style: normal
 ) {
   @font-face {
-    font-family: $family;
-    font-style: $style;
-    font-weight: $weight;
-    font-display: $display;
-    src: local($family),
+    src:
+      local($family),
       url('#{$path}.woff2') format('woff2'),
       url('#{$path}.woff') format('woff'),
       url('#{$path}.svg') format('svg'),
       url('#{$path}.ttf') format('truetype'),
       url('#{$path}.eot?') format('embedded-opentype');
+    font-family: $family;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: $display;
   }
 }

@@ -4,10 +4,10 @@
 
 // Code
 html {
+  height: 100%;
   font-size: $font-size;
   line-height: $font-line-height;
   color: $palette-dt-black-primary;
-  height: 100%;
 
   @media only screen and (max-width: $width-laptop) {
     font-size: 17px;
@@ -24,10 +24,10 @@ html {
 
 body {
   font-family: $font-family;
-  font-size: $font-size;
   font-weight: $font-weight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: $font-size;
   background-color: $palette-lt-white-primary;
 }
 

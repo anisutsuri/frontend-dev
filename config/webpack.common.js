@@ -73,6 +73,7 @@ module.exports = merge([
       })
     ]
   },
+  styles.styleLint(),
   images.loader(),
   vue.loader(),
   styles.loader({

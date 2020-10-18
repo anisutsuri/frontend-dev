@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StylelintPlugin  = require('stylelint-webpack-plugin');
 
 const { PATHS } = require('../paths');
 
@@ -38,6 +39,14 @@ exports.loader = ({ test = /\.css$/, options = {}, loaders = [] } = {}) => {
       new MiniCssExtractPlugin({
         filename: `${PATHS.assets}css/[name].[contenthash].css`
       })
+    ]
+  };
+};
+
+exports.styleLint = ({ options } = {}) => {
+  return {
+    plugins: [
+      new StylelintPlugin(options)
     ]
   };
 };
