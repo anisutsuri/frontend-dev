@@ -1,23 +1,22 @@
 // Imports
-@import 'utils/fonts';
-@import 'utils/reset';
+@import "utils/fonts";
+@import "utils/reset";
+@import "utils/overall";
 
 // Code
 html {
-  height: 100%;
   font-size: $font-size;
-  line-height: $font-line-height;
   color: $palette-dt-black-primary;
 
-  @media only screen and (max-width: $width-laptop) {
+  @media only screen and (max-width: $width-desktop-small) {
     font-size: 17px;
   }
 
-  @media only screen and (max-width: $width-table) {
+  @media only screen and (max-width: $width-desktop-small) {
     font-size: 16px;
   }
 
-  @media only screen and (max-width: $width-phone) {
+  @media only screen and (max-width: $width-phablet) {
     font-size: 15px;
   }
 }
@@ -28,13 +27,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: $font-size;
+  line-height: $font-line-height;
   background-color: $palette-lt-white-primary;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-family-title;
   font-weight: $font-weight-title;
 }
 
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
 // Modules:
-// @import 'modules/customized-form.scss';
+// @import 'modules/header';

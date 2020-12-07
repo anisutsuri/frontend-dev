@@ -15,7 +15,7 @@ module.exports = merge(common, {
     contentBase: PATHS.dist,
     // inline: false,
     // compress: true,
-    host: '192.168.0.101',
+    host: '192.168.0.100',
     port: 9000,
     overlay: {
       warnings: false,

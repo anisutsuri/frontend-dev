@@ -24,11 +24,11 @@ $palette-secondary-dark: #ff6800;
 
 // FONTS
 // Title fonts
-$font-family-title: 'Montserrat', sans-serif;
+$font-family-title: "Montserrat", sans-serif;
 $font-weight-title: 700;
 
 // Main fonts
-$font-family: 'Roboto', sans-serif;
+$font-family: "Roboto", sans-serif;
 $font-weight: 400;
 
 // Dimensions
@@ -39,14 +39,15 @@ $font-line-height: 1.4;
 // Width
 $width-desktop: 1920px;
 $width-desktop-small: 1440px;
-$width-laptop: 1200px;
-$width-laptop-small: 992px;
-$width-table: 768px;
+$width-laptop: 1280px;
+$width-tablet: 992px; // * 1024px (iPad Pro)?
+$width-small-tablet: 768px;
+$width-phablet: 576px;
 $width-phone: 320px;
 
 // Height
 $height-phone: 375px;
 
 // ANIMATION
-$anim-delay: .2s;
-$anim-bezier-button: cubic-bezier(1, .17, .16, .83);
+$anim-delay: 0.2s;
+$anim-bezier-button: cubic-bezier(1, 0.17, 0.16, 0.83);

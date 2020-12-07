@@ -1,35 +1,8 @@
-// Responsive font
-@mixin font-responsive($size-main, $size-min) {
-  $size-add: $size-main - $size-min;
-  $width-max: ($width-desktop - $width-phone) / 1px;
-
-  font-size: calc(#{$size-min + px} + #{$size-add} * ((100vw - #{$width-phone}) / #{$width-max}));
-}
-
-// Px to rem
-@function rem($pixels, $context: $font-size) {
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
-  }
-
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  @return $pixels / $context * 1rem;
-}
-
-// Color in ARGB
-@function color-opacity($color, $opacity: .5) {
-  // background: $color;
-  @return rgba($color, $opacity);
-}
-
-// Size to one line
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
+@import "../mixins/font-responsive";
+@import "../mixins/px-to-rem";
+@import "../mixins/color-in-argb";
+@import "../mixins/size-to-one-line";
+@import "../mixins/fonts-helper";
 
 // Placeholder helper
 // @mixin placeholder {
@@ -46,26 +19,3 @@
 //     @content;
 //   }
 // }
-
-// Fonts helper
-@mixin font-face(
-  $family,
-  $path,
-  $display: fallback,
-  $weight: 400,
-  $style: normal
-) {
-  @font-face {
-    src:
-      local($family),
-      url('#{$path}.woff2') format('woff2'),
-      url('#{$path}.woff') format('woff'),
-      url('#{$path}.svg') format('svg'),
-      url('#{$path}.ttf') format('truetype'),
-      url('#{$path}.eot?') format('embedded-opentype');
-    font-family: $family;
-    font-weight: $weight;
-    font-style: $style;
-    font-display: $display;
-  }
-}
