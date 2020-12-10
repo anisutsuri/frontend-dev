@@ -1,4 +1,4 @@
-// COLORS
+// Colors
 // Light theme
 $palette-lt-white-primary: #fff;
 $palette-lt-white-secondary: #f7f6f5;
@@ -22,7 +22,10 @@ $palette-secondary: #ffb841;
 $palette-secondary-light: #ffca86;
 $palette-secondary-dark: #ff6800;
 
-// FONTS
+// Fonts
+$font-size: 18px;
+$font-line-height: 1.4;
+
 // Title fonts
 $font-family-title: "Montserrat", sans-serif;
 $font-weight-title: 700;
@@ -32,10 +35,6 @@ $font-family: "Roboto", sans-serif;
 $font-weight: 400;
 
 // Dimensions
-$font-size: 18px;
-$font-line-height: 1.4;
-
-// DIMENSIONS
 // Width
 $width-desktop: 1920px;
 $width-desktop-small: 1440px;
@@ -48,6 +47,9 @@ $width-phone: 320px;
 // Height
 $height-phone: 375px;
 
-// ANIMATION
+// Animation
 $anim-delay: 0.2s;
 $anim-bezier-button: cubic-bezier(1, 0.17, 0.16, 0.83);
+
+// Other
+$container-width: $width-laptop;

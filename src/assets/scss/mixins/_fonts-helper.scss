@@ -1,13 +1,10 @@
-@mixin font-face(
-  $family,
-  $path,
-  $display: fallback,
-  $weight: 400,
-  $style: normal
-) {
+@mixin font-face($family, $path, $display: fallback, $weight: 400, $style: normal) {
   @font-face {
-    src: local($family), url("#{$path}.woff2") format("woff2"),
-      url("#{$path}.woff") format("woff"), url("#{$path}.svg") format("svg"),
+    src:
+      local($family),
+      url("#{$path}.woff2") format("woff2"),
+      url("#{$path}.woff") format("woff"),
+      url("#{$path}.svg") format("svg"),
       url("#{$path}.ttf") format("truetype"),
       url("#{$path}.eot?") format("embedded-opentype");
     font-family: $family;

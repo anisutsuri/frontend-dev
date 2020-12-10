@@ -21,7 +21,7 @@
 .container {
   margin: 0 auto;
   padding: 0 30px;
-  max-width: calc(1280px + 60px);
+  max-width: calc(#{$container-width} + 60px);
 }
 
 .flex {

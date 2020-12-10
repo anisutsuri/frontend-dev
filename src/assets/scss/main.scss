@@ -1,9 +1,7 @@
-// Imports
 @import "utils/fonts";
 @import "utils/reset";
 @import "utils/overall";
 
-// Code
 html {
   font-size: $font-size;
   color: $palette-dt-black-primary;
@@ -52,6 +50,3 @@ main {
 footer {
   grid-area: footer;
 }
-
-// Modules:
-// @import 'modules/header';
