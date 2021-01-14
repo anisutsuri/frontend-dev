@@ -4,10 +4,10 @@ exports.loader = () => ({
   module: {
     rules: [
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(?:|gif|png|jpe?g|svg)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
               name: '[name].[ext]',
               outputPath: `${PATHS.assets}img`,
@@ -15,7 +15,7 @@ exports.loader = () => ({
             }
           },
           {
-            loader: "image-webpack-loader",
+            loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
                 progressive: true,

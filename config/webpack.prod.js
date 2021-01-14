@@ -1,10 +1,10 @@
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const GoogleFontsPlugin = require("@beyonk/google-fonts-webpack-plugin")
+const GoogleFontsPlugin = require('@beyonk/google-fonts-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
-const { PATHS } = require('./paths')
+const { PATHS } = require('./paths');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -27,6 +27,6 @@ module.exports = merge(common, {
       ],
       formats: ['woff2', 'woff', 'ttf', 'eot'],
       path: `${PATHS.assets}fonts`
-  })
+    })
   ]
 });

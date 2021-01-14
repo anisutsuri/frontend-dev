@@ -6,9 +6,15 @@
   },
   "extends": ["airbnb/base"],
   "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "no-param-reassign": "warn",
     "no-plusplus": "off",
     "eol-last": "off",
-    "max-len": ["error", 80, { "ignoreUrls": true }],
+    "max-len": [
+      "error",
+      120,
+      { "ignoreUrls": true }
+    ],
     "linebreak-style": "off",
     "import/no-mutable-exports": "warn",
     "prefer-const": "warn",

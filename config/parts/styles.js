@@ -1,34 +1,37 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const StylelintPlugin  = require('stylelint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const { PATHS } = require('../paths');
 
 exports.loader = ({ test = /\.css$/, options = {}, loaders = [] } = {}) => {
+  options = Object.assign(options, {
+    esModule: false
+  });
   return {
     module: {
       rules: [
         {
-          test: test,
+          test,
           use: [
-            "style-loader",
+            'style-loader',
             {
               loader: MiniCssExtractPlugin.loader,
               options
             },
             {
-              loader: "css-loader",
+              loader: 'css-loader',
               options: {
                 url: false,
                 sourceMap: true
               }
             },
             {
-              loader: "postcss-loader",
+              loader: 'postcss-loader',
               options: {
-                sourceMap: true,
-                config: {
-                  path: './postcss.config.js'
-                }
+                postcssOptions: {
+                  config: './postcss.config.js'
+                },
+                sourceMap: true
               }
             }
           ].concat(loaders),

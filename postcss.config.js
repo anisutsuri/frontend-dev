@@ -5,7 +5,7 @@ module.exports = {
       sort: true
     }),
     // 'postcss-import': {},
-    // 'postcss-preset-env': {},
+    'postcss-preset-env',
     require('cssnano')({
       preset: [
         'default',
@@ -17,4 +17,4 @@ module.exports = {
       ]
     })
   ]
-}
+};

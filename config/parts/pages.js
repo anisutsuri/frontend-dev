@@ -6,14 +6,14 @@ exports.loader = ({ title = 'Frontend-development', filename = 'index', chunks =
   return {
     plugins: [
       new HtmlWebpackPlugin({
-        title: title,
+        title,
         filename: `${filename}.html`,
         template: `${PAGES_DIR}/${filename}.html`,
         // scriptLoading: 'defer',
         favicon: `${PATHS.src}/static/favicon.ico`,
         meta: {
           charset: { charset: 'utf-8' },
-          'viewport': 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no',
+          viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no',
         },
         chunks: ['vendors', 'app'].concat(chunks),
         minify: {
@@ -27,5 +27,5 @@ exports.loader = ({ title = 'Frontend-development', filename = 'index', chunks =
         },
       })
     ]
-  };
+  }
 };

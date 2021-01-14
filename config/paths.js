@@ -8,4 +8,4 @@ const PATHS = {
 
 const PAGES_DIR = `${PATHS.src}/pages`;
 
-module.exports = {PATHS, PAGES_DIR};
+module.exports = { PATHS, PAGES_DIR };

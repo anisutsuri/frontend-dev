@@ -2,11 +2,11 @@
   @font-face {
     src:
       local($family),
-      url("#{$path}.woff2") format("woff2"),
-      url("#{$path}.woff") format("woff"),
-      url("#{$path}.svg") format("svg"),
-      url("#{$path}.ttf") format("truetype"),
-      url("#{$path}.eot?") format("embedded-opentype");
+      url('#{$path}.woff2') format('woff2'),
+      url('#{$path}.woff') format('woff'),
+      url('#{$path}.svg') format('svg'),
+      url('#{$path}.ttf') format('truetype'),
+      url('#{$path}.eot?') format('embedded-opentype');
     font-family: $family;
     font-weight: $weight;
     font-style: $style;

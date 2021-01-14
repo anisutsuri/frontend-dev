@@ -16,7 +16,7 @@ module.exports = merge([
     output: {
       filename: `${PATHS.assets}js/[name].[contenthash].js`,
       path: PATHS.dist,
-      publicPath: '/'
+      publicPath: ''
     },
     optimization: {
       splitChunks: {
@@ -84,8 +84,8 @@ module.exports = merge([
         options: {
           sourceMap: true,
           additionalData: `
-            @import '@/${PATHS.assets}scss/utils/vars.scss';
-            @import '@/${PATHS.assets}scss/utils/mixins.scss';
+            @import '@/${PATHS.assets}scss/_vars.scss';
+            @import '@/${PATHS.assets}scss/_mixins.scss';
           `
         }
       }

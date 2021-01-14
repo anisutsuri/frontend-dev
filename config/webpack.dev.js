@@ -3,19 +3,19 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
-const { PATHS } = require('./paths')
+const { PATHS } = require('./paths');
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
+  target: 'web',
   devServer: {
+    historyApiFallback: true,
     open: true,
-    // openPage: [ 'https://vk.com', 'https://youtube.com' ],
-    // index: './index.html',
     contentBase: PATHS.dist,
-    // inline: false,
-    // compress: true,
+    compress: true,
     host: '192.168.0.100',
+    hot: true,
     port: 9000,
     overlay: {
       warnings: false,

@@ -664,6 +664,7 @@
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,
     "selector-id-pattern": null,
+    "selector-list-comma-newline-after": "always",
     "selector-list-comma-newline-before": "never-multi-line",
     "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never",
@@ -691,7 +692,7 @@
     "selector-type-no-unknown": true,
     "shorthand-property-no-redundant-values": true,
     "string-no-newline": true,
-    "string-quotes": "double",
+    "string-quotes": "single",
     "time-min-milliseconds": 10,
     "unit-disallowed-list": [
       "ch",
