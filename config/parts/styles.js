@@ -46,10 +46,8 @@ exports.loader = ({ test = /\.css$/, options = {}, loaders = [] } = {}) => {
   };
 };
 
-exports.styleLint = ({ options } = {}) => {
-  return {
-    plugins: [
-      new StylelintPlugin(options)
-    ]
-  };
-};
+exports.styleLint = ({ options } = {}) => ({
+  plugins: [
+    new StylelintPlugin(options)
+  ]
+});
