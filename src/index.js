@@ -1,10 +1,7 @@
-// Import JS
-import './js';
+// import './js';
 
-// Import CSS - SASS
 import './assets/scss/main.scss';
 
-// Vue
 import Vue from 'vue';
 import store from './vuex/store';
 import router from './router/router';
